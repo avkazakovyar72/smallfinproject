@@ -42,7 +42,7 @@ class Child (tk.Toplevel):
         self.title('Добавить доходы/расходы')
         self.geometry('400x300+400+300')
         self.resizable(False, False)
-
+'''
         label_description = ttk.Label(self, text='Наименование')
         label_description.place(x=50, y=50)
         label_select = ttk.Label(self, text='Статья')
@@ -70,7 +70,7 @@ class Child (tk.Toplevel):
         self.grab_set()
         self.focus_set()
 
-
+'''
 
 
 
