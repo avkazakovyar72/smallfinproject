@@ -45,6 +45,30 @@ class Child(tk.Toplevel):
         self.geometry('400x300+400+300')
         self.resizable(False, False)
 
+        label_description = tk.Label(self, text='Основание: ')
+        label_description.place(x=50, y=50)
+        label_select = tk.Label(self, text='Статья :')
+        label_select.place(x=50, y=80)
+        label_summa = tk.Label(self, text='Сумма: ')
+        label_summa.place(x=50, y=110)
+
+        self.entry_description = ttk.Entry(self)
+        self.entry_description.place(x=200, y=50)
+        self.entry_money = ttk.Entry(self)
+        self.entry_money.place(x=200, y=110)
+        self.combobox = ttk.Combobox(self, values=[u'Доход', u'Расход'])
+        self.combobox.current(0)
+        self.combobox.place(x=200, y=80)
+
+        btn_cancel = ttk.Button(self, text='Закрыть', command=self.destroy)
+        btn_cancel.place(x=200, y=170)
+
+        btn_new = ttk.Button(self, text='Добавить запись')
+        btn_new.place(x=50, y=170)
+        btn_new.bind('<Button-1>')
+
+
+
         self.grab_set()
         self.focus_set()
 
